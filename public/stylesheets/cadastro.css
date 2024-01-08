@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*
+{
+  font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cadastroContainer {
+    max-width: 60rem;
+    display: grid;
+    gap: 20px;
+    width: 60%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    box-shadow: 1.5px 1.5px 5px;
+    margin: 2% auto;
+}
+
+.cadastroFormContainer {
+    padding: 30px;
+    margin: auto;
+}
+

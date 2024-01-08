@@ -1,0 +1,485 @@
+// Initialize Firebase
+var firebaseConfig = {
+   apiKey: "AIzaSyDyZVF1WDjTLkKcnDhz1e-wKGVOl9g5Hn8",
+      authDomain: "teste-170423.firebaseapp.com",
+      projectId: "teste-170423",
+      storageBucket: "teste-170423.appspot.com",
+      messagingSenderId: "564787693295",
+      appId: "1:564787693295:web:c7e7590016eace397cbd1a",
+      measurementId: "G-D5Q69CPL1D"
+};
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the storage service
+var storage = firebase.storage();
+
+// Create a reference to the folder you want to create
+var folderRef = storage.ref().child('myFolder');
+
+// Create the folder
+folderRef.put(null).then(function(snapshot) {
+  console.log('Folder created successfully!');
+  // Generate a media key for the folder
+  folderRef.getMetadata().then(function(metadata) {
+    console.log('Media key for the folder:', metadata.fullPath);
+    // Upload 5 photos inside the folder
+    for (var i = 1; i <= 5; i++) {
+      var photoRef = folderRef.child('photo' + i + '.jpg');
+      var photoFile = // Your photo file here
+      photoRef.put(photoFile).then(function(snapshot) {
+        console.log('Photo uploaded successfully!');
+      }).catch(function(error) {
+        console.error('Error uploading photo:', error);
+      });
+    }
+  }).catch(function(error) {
+    console.error('Error getting metadata:', error);
+  });
+}).catch(function(error) {
+  console.error('Error creating folder:', error);
+});
+
+
+// Initialize Firebase
+var firebaseConfig = {
+  // Your Firebase config here
+};
+firebase.initializeApp(firebaseConfig);
+
+// Get a reference to the storage service
+var storage = firebase.storage();
+
+// Read the media key for the folder from a JSON file
+var xhr = new XMLHttpRequest();
+xhr.open('GET', 'folder.json');
+xhr.onload = function() {
+  if (xhr.status === 200) {
+    var folderKey = JSON.parse(xhr.responseText).mediaKey;
+    // Access the folder using the media key
+    var folderRef = storage.ref().child(folderKey);
+    // List the media files inside the folder
+    folderRef.listAll().then(function(res) {
+      res.items.forEach(function(itemRef) {
+        // Download the media file
+        itemRef.getDownloadURL().then(function(url) {
+          console.log('Download URL:', url);
+          // Use the download URL to download the media file
+          // ...
+        }).catch(function(error) {
+          console.error('Error getting download URL:', error);
+        });
+      });
+    }).catch(function(error) {
+      console.error('Error listing folder:', error);
+    });
+  } else {
+    console.error('Error loading JSON file:', xhr.statusText);
+  }
+};
+xhr.onerror = function() {
+  console.error('Error loading JSON file:', xhr.statusText);
+};
+xhr.send();
+
+{
+  "mediaKey": "myFolder"
+}
+
+
+
+
+    //paste here your copied configuration code
+    const firebaseConfig = {
+      apiKey: "AIzaSyDyZVF1WDjTLkKcnDhz1e-wKGVOl9g5Hn8",
+      authDomain: "teste-170423.firebaseapp.com",
+      projectId: "teste-170423",
+      storageBucket: "teste-170423.appspot.com",
+      messagingSenderId: "564787693295",
+      appId: "1:564787693295:web:c7e7590016eace397cbd1a",
+      measurementId: "G-D5Q69CPL1D"
+     };
+  
+     // Initialize Firebase
+     firebase.initializeApp(firebaseConfig);
+     console.log(firebase);
+     function uploadImage() {
+        const ref = firebase.storage().ref();
+        const file = document.querySelector("#photo").files[0];
+        const name = +new Date() + "-" + file.name;
+        start();
+        const metadata = {
+           contentType: file.type
+        };
+        const task = ref.child(name).put(file, metadata);task
+        .then(snapshot => snapshot.ref.getDownloadURL())
+        .then(url => {
+        console.log(url);
+        alert('image uploaded successfully');
+         pause();
+        document.querySelector("#chave").value = url;
+     })
+     .catch(console.error);
+     const errorMsgElement = document.querySelector('span#errorMsg');
+     }
+     ======================================================================================================
+
+     document.querySelectorAll('button[name="btn"]').forEach(function(botao) {
+  botao.addEventListener('click', function() {
+    // Chame a função que fará a requisição AJAX para buscar os dados
+    buscarDados(botao.value);
+  });
+});
+     function buscarDados(valorBotao) {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', `buscar_dados.php?valor=${valorBotao}`);
+  xhr.onload = function() {
+    if (xhr.status === 200) {
+      const dados = JSON.parse(xhr.responseText);
+      // Crie um elemento div para cada conjunto de dados
+      for (let i = 0; i < dados.length; i++) {
+        const div = document.createElement('div');
+        div.innerHTML = `<h2>${dados[i].titulo}</h2><p>${dados[i].descricao}</p>`;
+        // Adicione o elemento div à página HTML
+        document.body.appendChild(div);
+      }
+    } else {
+      console.log('Erro ao buscar dados');
+    }
+  };
+  xhr.send();
+}
+============================================================================================================================
+for (var i = 0; i < responseJson.length; i++) {
+        var registro = responseJson[i];
+  
+        if (i % 8 === 0 && i !== 0) {
+          html += '</div>'; // Fecha a div anterior
+          html += '<div class="registro">'; // Inicia uma nova div
+        }
+  
+        html += '<p> id do projeto:' + registro[0] + '</p>';
+        html += '<p> nomde do projeto:' + registro[1] + '</p>';
+        html += '<p> cidade do projeto:' + registro[2] + '</p>';
+        html += '<p>descrição do projeto:' + registro[3] + '</p>';
+        html += '<p> objetivo do projeto:' + registro[4] + '</p>';
+        html += '<p>chave de midia:' + registro[5] + '</p>';
+        html += '<p> id criador:' + registro[6] + '</p>';
+        html += '<p> ods do projeto:' + registro[7] + '</p>';
+      }
+      
+      html += '</div>'; // Fecha a última div
+
+
+==============================================
+console.log("nomeProjeto: ", nomeProjeto);
+    console.log("cidadeProjeto: ", cidadeProjeto);
+    console.log("descricaoProjeto: ", descricaoProjeto);
+    console.log("objetivoProjeto: ", objetivoProjeto);
+    console.log("idCriador: ", idCriador);
+    console.log("opOds: ", opOds);
+    console.log("opPartiners: ", opPartiners);
+
+      $totalOds = count($this->opOds);
+    $totalPartiner = count($this->partiner);
+
+    echo "Total de Ods vaiavel global: " . print_r($this->opOds, true);
+    echo("<br>");
+    echo "Total de Patrocinadores variavel global: " . print_r($this->partiner, true); 
+    echo("<br>");    
+     echo("total ods ->  ".$totalOds);
+     echo("<br>");
+     echo("total ods ->  ".$totalPartiner);
+     echo("<br>");
+
+     function teste(valorBotao) {
+  var urlParams = new URLSearchParams(window.location.search);
+  var valor = urlParams.get("valor");
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", "http://localhost/senac-dojo-2023/controllers/controllerOds.php?valor=" + valor, false);
+    xhr.send();
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var responseJson = JSON.parse(xhr.responseText);
+      console.log(responseJson);
+      var html = ''; // Variável para armazenar o HTML gerado
+      if(responseJson.length <1){
+        html += '<h1 class=textoODs> Atualmente não existem projetos vinculados a esse ODS</h1>';
+      }
+      else
+      {
+        html += '<h1 class=textoODs> TOTAL DE PROJETOS DA ODS: ' +'<span>'+ responseJson.length+'</span>' + '</h1>';
+        for(i=0;i<responseJson.length;i++)
+        {
+          html += '<a href="./telaProjeto.html"><p>Nome do Projeto: ' + responseJson[i] + '</p></a>';
+        }
+      }
+      document.getElementById('demo').innerHTML = html;
+    }
+  }
+      function listarAllFromODs($ods) {
+        include('conexao.php');
+        $query = "SELECT projetos.*, ods.nome_ods, parceiros.nome_parceiro
+        FROM projetos
+        LEFT JOIN projetos_com_ods_parceiros ON projetos.id_projeto = projetos_com_ods_parceiros.projeto_id
+        LEFT JOIN ods ON projetos_com_ods_parceiros.ods_id = ods.id_ods
+        LEFT JOIN parceiros ON projetos_com_ods_parceiros.parceiro_id = parceiros.id_parceiro
+        WHERE id_ods = ".$ods.";";
+        $sql = mysqli_query($banco, $query);
+        $linhas = mysqli_num_rows($sql);
+        $registros = array();
+        for ($i = 0; $i < $linhas; $i++) {
+            $registro = mysqli_fetch_row($sql);
+            $registros[] = $registro; 
+        }
+        echo json_encode($registros); 
+        mysqli_close($banco);
+    }
+=============================================================
+function requestAllProjectOfOds() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const valueOds = urlParams.get("ods");
+  const state = document.querySelector("#estadoProjeto");
+  const citys = document.querySelector("#cidadeProjeto");
+
+  const urlStates = "https://servicodados.ibge.gov.br/api/v1/localidades/estados";
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", urlStates, true);
+  xhr.send();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      let responseState = JSON.parse(xhr.response);
+      const optionsStates = document.createElement("optgroup");
+      optionsStates.setAttribute("label", "Selecione um estado");
+      responseState.forEach((stateItem) => {
+        optionsStates.innerHTML += `<option>${stateItem.sigla}</option>`;
+      });
+      state.appendChild(optionsStates);
+    }
+  };
+
+  state.addEventListener("change", async () => {
+    const urlCitys = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${state.value}/municipios`;
+    var xhrcitys = new XMLHttpRequest();
+    xhrcitys.open("GET", urlCitys, true);
+    xhrcitys.send();
+    xhrcitys.onreadystatechange = function () {
+      if (xhrcitys.readyState === 4 && xhrcitys.status === 200) {
+        let responsecitys = JSON.parse(xhrcitys.response);
+        const optionsCitys = document.createElement("optgroup");
+        responsecitys.forEach((city) => {
+          optionsCitys.innerHTML += `<option>${city.nome}</option>`;
+        });
+        citys.innerHTML = "";
+        citys.appendChild(optionsCitys);
+      }
+    };
+  });
+citys.addEventListener("change",()=>
+{
+  var xhrProject = new XMLHttpRequest()
+  xhrProject.open("GET", "http://localhost/senac-dojo-2023/controllers/controllerOds.php?ods=" + valueOds, true);
+  xhrProject.send();
+  xhrProject.onreadystatechange = function () {
+    if (xhrProject.readyState === 4 && xhrProject.status === 200) {
+      let responseProject = JSON.parse(xhrProject.responseText);
+      console.log(responseProject);
+      responseProject = responseProject.filter((res) => res.cidade_projeto === citys.value);
+      var html = "";
+      for (let i = 0; i < responseProject.length; i++) {
+        html += '<div class="container">';
+        html += '<link rel="stylesheet" href="../public/stylesheets/listarProjetosOds.css">';
+        html += '<div class="card">';
+        html += '<img src="../public/img/img_projeto_vida_verde.jpg">';
+        html += `<a href=../views/telaProjeto.html?id=${responseProject[i].id_projeto}>Nome do projeto: ${responseProject[i].nome_projeto}</a>`;
+        html += `<p>ODS do projeto: ${responseProject[i].nome_ods}</p>`;
+        html += "</div>";
+        html += "</div>";
+        html += "<br>";
+      }
+      document.getElementById("divNomeProjeto").innerHTML = html;
+    }
+  }
+}) 
+var xhrProject = new XMLHttpRequest()
+xhrProject.open("GET", "http://localhost/senac-dojo-2023/controllers/controllerOds.php?ods=" + valueOds, true);
+xhrProject.send();
+xhrProject.onreadystatechange = function () {
+  if (xhrProject.readyState === 4 && xhrProject.status === 200) {
+    let responseProject = JSON.parse(xhrProject.responseText);
+    console.log(responseProject);
+    responseProject = responseProject.filter((res) => res.cidade_projeto === citys.value);
+    var html = "";
+    for (let i = 0; i < responseProject.length; i++) {
+      html += '<div class="container">';
+      html += '<link rel="stylesheet" href="../public/stylesheets/listarProjetosOds.css">';
+      html += '<div class="card">';
+      html += '<img src="../public/img/img_projeto_vida_verde.jpg">';
+      html += `<a href=../views/telaProjeto.html?id=${responseProject[i].id_projeto}>Nome do projeto: ${responseProject[i].nome_projeto}</a>`;
+      html += `<p>ODS do projeto: ${responseProject[i].nome_ods}</p>`;
+      html += "</div>";
+      html += "</div>";
+      html += "<br>";
+    }
+    document.getElementById("divNomeProjeto").innerHTML = html;
+  }
+}
+==============================================================================
+document.addEventListener('DOMContentLoaded', async () => {
+    const citysSelect = document.querySelector("#cidadeProjeto");
+    verifyLogin();
+    const urlCitys = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/43/municipios';
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", urlCitys, false);
+    xhr.send();
+    if (xhr.readyState === 4 && xhr.status === 200) {
+        let response = JSON.parse(xhr.response);
+        const optionsCitys = document.createElement('optgroup')
+        response.forEach(city => {
+            optionsCitys.innerHTML += `<option>${city.nome}</option>`
+        })
+        citysSelect.appendChild(optionsCitys);
+    }// if request
+});
+
+// Inicializar Firebase
+const firebaseConfig = {
+    apiKey: "AIzaSyDyZVF1WDjTLkKcnDhz1e-wKGVOl9g5Hn8",
+    authDomain: "teste-170423.firebaseapp.com",
+    projectId: "teste-170423",
+    storageBucket: "teste-170423.appspot.com",
+    messagingSenderId: "564787693295",
+    appId: "1:564787693295:web:c7e7590016eace397cbd1a"
+  };
+firebase.initializeApp(firebaseConfig);
+const storage = firebase.storage(); // Fim da inicialização
+
+var inserirCPF = document.querySelector("#CPF");
+inserirCPF.value = sessionStorage.getItem("cpf");
+
+let btnSendProject = document.querySelector("#btnEnviar")
+btnSendProject.addEventListener('click', function () {
+    verifyInputfiles(event);
+})
+
+function sendProject(event) {
+    // Filtro de imagem/video
+    var input = document.getElementById("photo");
+    var files = input.files;
+    let countImg = 0;
+    for (let i = 0; i < files.length; i++) {
+        const file = files[i];
+        const type = file.type;
+        if (type.startsWith('video/')) {
+            // Verificação de se o arquivo especifico é vídeo
+        } else if (type.startsWith('image/')) {
+            countImg = 1;
+        } else {
+            alert("Tipo de arquivo inválido");
+            input.value = ''; // Limpar a seleção do arquivo
+            return; // Terminar a função
+        }
+    }
+
+    // Resto do código para envio do servidor
+    const optionsOds = document.querySelectorAll("#opcaoOds input[type='checkbox']")
+    let selectedOds = [];
+    for (let i = 0; i < optionsOds.length; i++) {
+        if (optionsOds[i].checked) {
+            selectedOds.push(optionsOds[i].value)
+        }
+    }
+
+    const optionsPartiners = document.querySelectorAll("#opcaoPartiners input[type='checkbox']")
+    let selectedPartiners = [];
+    for (let i = 0; i < optionsPartiners.length; i++) {
+        if (optionsPartiners[i].checked) {
+            selectedPartiners.push(optionsPartiners[i].value)
+        }
+    }
+
+    const nameProject = document.querySelector("#nomeProjeto").value;
+    const stateProject = document.querySelector("#estadoProjeto").value;
+    const cityProject = document.querySelector("#cidadeProjeto").value;
+    const descriptionProject = document.querySelector("#descricaoProjeto").value;
+    const objectProject = document.querySelector("#objetivoProjeto").value;
+    const idCreator = sessionStorage.getItem("id");
+    const optionsOdsFinal = selectedOds;
+    const optionPartinersFinal = selectedPartiners;
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost/senac-dojo-2023/controllers/controllerProject.php", false);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log("Requisição concluída com sucesso");
+            alert("Projeto inserido com sucesso");
+            console.log(xhr.responseText);
+
+            // Pegar o ID do projeto
+            var response = xhr.responseText;
+            var startIndex = response.indexOf("id: ") + 4; // Obter o índice inicial do ID
+            var endIndex = response.indexOf(" ", startIndex); // Obter o índice final do ID
+            var idProject = response.substring(startIndex, endIndex);
+            // Verificar se o ID do projeto é válido
+            if (idProject) {
+                // Criando a referência da pasta com base no ID do projeto
+                var folderRef = storage.ref().child(idProject);
+                
+                // Fazendo o upload dos arquivos para a pasta com o nome do projeto
+                let contador = 0;
+                for (let i = 0; i < files.length; i++) {
+                    var file = files[i];
+                    var fileRef = folderRef.child(file.name);
+                    fileRef.put(file).on(
+                        "state_changed",
+                        function (snapshot) {
+                            // Atualizar a barra de progresso
+                            var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                            console.log("Progresso do upload:", progress + "%");
+
+                            var progressBar = document.getElementById("progressBar");
+                            progressBar.value = progress;
+                        },
+                        function (error) {
+                            // Tratar erros, se necessário
+                        },
+                        function () {
+                            // Upload do arquivo concluído com sucesso
+                            console.log("Upload do arquivo", file.name, "concluído com sucesso!");
+                            contador++;
+                            if (contador == files.length) {
+                                alert("Arquivos enviados para a pasta -> " + idProject);
+                                window.location.href = "../views/restrictArea.html";
+                            }
+                        }
+                    );
+                }
+            }
+        }
+    };
+    xhr.send("nomeProjeto=" + encodeURIComponent(nameProject) +
+        "&estadoProjeto=" + encodeURIComponent(stateProject) +
+        "&cidadeProjeto=" + encodeURIComponent(cityProject) +
+        "&descricaoProjeto=" + encodeURIComponent(descriptionProject) +
+        "&objetivoProjeto=" + encodeURIComponent(objectProject) +
+        "&idCriador=" + encodeURIComponent(idCreator) +
+        "&opcaoOds=" + encodeURIComponent(JSON.stringify(optionsOdsFinal)) +
+        "&opcaoPatrocinador=" + encodeURIComponent(JSON.stringify(optionPartinersFinal))
+    );
+}// function sendProject
+
+function verifyLogin() {
+    if (sessionStorage.getItem("id") == null) {
+        window.location.href = "../index.html";
+    }
+}
+
+function verifyInputfiles(event) {
+    let input = document.getElementById("photo");
+    if (input.files.length == 0) {
+        alert("Favor inserir pelo menos 1 imagem para o projeto.");
+        input.style.borderColor = 'red';
+        input.focus();
+        event.preventDefault();
+    } else {
+        sendProject();
+    }
+}

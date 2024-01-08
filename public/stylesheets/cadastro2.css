@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+* {
+    font-family: 'DM Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.login-container {
+    padding: 5%;
+
+}
+
+.login-form-container {
+    width: 375px;
+    background-color: #F6F6F6;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: grid;
+    grid-auto-rows: 25% 50% 25%;
+}
+
+
+.login-form-container h1 {
+    color: #1B98E0;
+    text-align: center;
+    padding: 12%;
+    font-weight: bold;
+
+}
+
+.login-form-container h2 {
+    color: #1B98E0;
+    text-align: center;
+    padding: 5%;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+}
+
+.form {
+    width: 270px;
+    margin-left: 11%;
+}
+
+
+.form button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 4%;
+    border: none;
+    border-radius: 20px;
+    background-color: #1B98E0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.form button:hover {
+    background-color: #1479A9;
+}
+
+.login-form-container input[type="text"],
+.login-form-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    outline: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.login-form-container input[type="text"]:focus,
+.login-form-container input[type="password"]:focus {
+    border-bottom: 1.5px solid #1B98E0;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+::placeholder {
+    color: #1B98E0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+    font-size: 1.6vh;
+}
+
+#snhError {
+    max-width: 450px;
+    font-size: 1.5vh;
+    text-align: center;
+    padding-top: 10%;
+    color: #b70906;
+}
+
+.checkName {
+    display: block;
+    text-align: start;
+    padding: 1%;
+}
+
+
+.check {
+    cursor: pointer;
+    text-align: center;
+    padding: 1%;
+  }
+ 
+  
+  
