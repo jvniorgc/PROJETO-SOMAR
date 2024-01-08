@@ -4,10 +4,10 @@
 </p>
 
 ## Descrição do Projeto
-...
+Versão inicial para o site do projeto SOMAR
 
 ## Status do Projeto
-     Em construção...  
+     Completo  
 ## Tecnologias utilizadas
 * HTML
 * CSS
