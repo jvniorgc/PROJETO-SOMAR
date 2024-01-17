@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/stylesheets/inserirProjeto.css">
+  <link rel="stylesheet" href="../public/stylesheets/index.css">
+  <script type="text/javascript" src="../JavaScript/app.js"></script>
+  <title>Deletar Projeto</title>
+</head>
+
+<body>
+  <div id="header"></div>
+  <div class="projeto-container">
+    <div class="projeto-form-container">
+      <form class="form-projeto">
+        <input type="number" name="idProjeto" id="idProjeto" placeholder="idProjeto" disabled>
+        <input type="text" name="nomeProjeto" id="nomeProjeto" placeholder="Nome do Projeto" disabled>
+        <input type="text" class="select1" id="estadoProjeto" value="RS" disabled>
+        </select>
+        <select class="select2" name="cidadeProjeto" id="cidadeProjeto" disabled></select>
+        <textarea name="descricaoProjeto" id="descricaoProjeto" cols="30" rows="10"
+          placeholder="Descrição do Projeto" disabled></textarea>
+        <input type="text" name="objetivoProjeto" id="objetivoProjeto" placeholder="Objetivo do Projeto" disabled>
+        <input type="number" name="id" id="CPF" placeholder="Coloque seu ID" disabled>
+        <input type="file" id="photo" multiple accept="image/*, video/*" disabled>   
+          <button class="btnEnviar" id="btnEnviar">Deletar projeto</button>
+      </form>
+    </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+  <script src="../JavaScript/deleteProject.js"></script>
+</body>
+</html>

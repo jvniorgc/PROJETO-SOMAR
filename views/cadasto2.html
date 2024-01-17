@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../public/stylesheets/cadastro2.css">
+    <link rel="icon" type="image/x-icon" href="../public/img/SDG-Wheel.png">
+    <script type="text/javascript" src="../JavaScript/app.js"></script>
+</head>
+
+<body>
+    <div id="header"></div>
+    <div class="login-container">
+        <div class="login-form-container">
+            <h1>Cadastro</h1>
+            <form class="form" method="GET">
+                <input type="text" required id="nomeCompleto" name="nomeCompleto" placeholder="Nome Completo *">
+                <input type="text" required id="cpf" name="cpf" placeholder="CNPJ *">
+                <input type="text" required id="email" name="email" placeholder="E-mail *">
+                <input type="password" required id="senha" name="senha" placeholder="Senha *">
+                <h2>Selecione o cargo</h2>
+                <label class="checkName"><input class="check" type="radio" name="cargo" value="2">Usuário</label>
+                <label class="checkName"><input class="check" type="radio" name="cargo" value="1">Administrador</label>
+                <button id="cadastrar">Cadastrar</button>
+                <script src="../JavaScript/cadastro.js"></script>
+                <div id="snhError"></div>
+
+            </form>
+        </div>
+    </div>
+    <footer id="footer"></footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost/senac-dojo-2023/assets/header.html", false);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("header").innerHTML = this.responseText;
+                }
+            }
+            xhr.send()
+        })
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost/senac-dojo-2023/assets/footerRestrict.html", false);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    document.getElementById("footer").innerHTML = this.responseText;
+                }
+            }
+            xhr.send()
+        })
+    </script>
+    <script src="../JavaScript/cadastro.js"></script>
+</body>
+
+</html>

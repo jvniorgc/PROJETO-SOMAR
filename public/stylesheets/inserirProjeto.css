@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*
+{
+  font-family: 'DM Sans', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.projeto-container 
+{
+    max-width: 60rem;
+    background-color: #F6F6F6;
+    margin: 2% auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+.projeto-form-container
+{
+  
+    padding: 30px;
+}
+
+.form-projeto
+{
+    margin: auto;
+    display: grid;
+}
+
+.select1{
+ margin: 2% 0;
+    padding: 2%;
+    border-radius: 10px;
+    border: 0.3px;
+    border-style: solid;
+    font-size: 2.3vh
+}
+
+.select2{
+   margin: 2% 0;
+    padding: 2%;
+    border-radius: 10px;
+    border: 0.3px;
+    border-style: solid;
+    font-size: 2.3vh
+}
+
+.divBotao
+{
+    width: 70%; 
+    margin: auto;
+    display: grid;
+}
+
+.form-projeto input
+{
+    margin: 2% 0;
+    padding: 2%;
+    border-radius: 10px;
+    border: 0.3px;
+    border-style: solid;
+    font-size: 2.3vh
+}
+
+textarea 
+{
+    border-radius: 10px;
+    font-size: 2.5vh;
+}
+
+textarea::placeholder
+{
+    font-size: 2.3vh;
+}
+
+
+.btnEnviar  
+{
+  width: 95%;
+  margin: 2% 0%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: #1B98E0;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 12px;
+  margin-right: 12px;
+  transition: 0.2s ease-in-out;
+  font-size: 2.5vh;
+}
+h3{
+  text-align: center;
+}
+.cyberpunk-button {
+    background-color: #1B98E0 ;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cyberpunk-checkbox {
+    appearance: none !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #1B98E0 !important;
+    border-radius: 5px !important;
+    background-color: transparent !important;
+    display: inline-block !important;
+    position: relative !important;
+    margin-right: 10px !important;
+    cursor: pointer !important;
+    padding: 0 !important;
+  }
+  
+  .cyberpunk-checkbox:before {
+    content: "";
+    background-color: #1B98E0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .cyberpunk-checkbox:checked:before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .cyberpunk-checkbox-label {
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    align-items: center;
+    margin: 1%; 
+    padding: 0;
+  }
+  .opcaoPartiners{
+    display: inline;
+    padding: 2vh 0;
+  }
+
+  .div1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #oldOds {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .opcaoPartiners {
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  
+  }
+
+  .opcaoPartiners label {
+    margin: auto;
+  }
+
+  .progressBar {
+    vertical-align: baseline;
+    margin: 50%;
+    margin: 5%;
+  }
+
+  .aviso p {
+    text-align: center;
+    color: red;
+  }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../public/stylesheets/login.css">
+    <link rel="icon" type="image/x-icon" href="../public/img/SDG-Wheel.png">
+    <script type="text/javascript" src="../JavaScript/app.js"></script>
+</head>
+<body>
+  <header id="header"></header>
+  <div class="login-container">
+    <div class="login-form-container">
+        <h1>Login</h1>
+        <form class="form" method="GET">
+            <input type="text" required  id="cpf" name="cpf" placeholder="CNPJ *" >
+            <input type="password" required id="senha" name="senha" placeholder="Senha *" >
+            <div id="snhError"></div>
+            <button type="submit" id="login">Login</button>
+            
+        </form>
+    </div>
+  </div>
+  <footer id="footer"></footer>
+  <script src="../JavaScript/login.js"></script>
+</body>
+</html>

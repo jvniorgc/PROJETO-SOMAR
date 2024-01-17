@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+*
+{
+  font-family: 'DM Sans', sans-serif;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+.ods-container
+{
+    max-width: 85rem;
+    display: table;
+    margin: auto;
+    padding: 2% 0;
+    text-align: center;
+}
+
+.ods-row 
+{
+    padding-bottom: 0.5%;
+}
+
+.text-container
+{
+    max-width: 85rem;
+    margin: auto;
+    padding: 0 9%;
+}
+
+.text-container p
+{
+    font-size: 2.5vh;
+    text-align: justify;
+    margin: 0;
+}
+
+.titulo
+{
+    text-align: center;
+    color: #1B98E0;
+    font-size: 2.84rem;
+    font-weight: bold;
+    padding: 2% 0;
+}
+
+.btnOds 
+{
+    border-style: none;
+    position: relative;
+    overflow: hidden;
+    width: 16vh;
+    height: 16vh;
+    padding: 0; 
+}
+
+.zoom-image {
+    transition: transform 0.3s ease-in-out;
+  }
+
+.zoom-image:hover {
+    transform: scale(1.12) translateX(3px);
+    cursor: pointer;
+}
+
+.textoODs
+{    
+    text-align: center;
+    font-size: 2.5vh;
+    
+}
+
+#demo 
+{
+    max-width: 85rem;
+    margin-top: 2%;
+    font-size: 2.5vh;
+}
+
+#demo a 
+{
+    text-decoration: none;
+}
+
+#totalOds 
+{
+    max-width: 85rem;
+    margin: auto;
+    padding-top: 2%;
+
+}
+
+.causas
+{
+    padding: 2.5vh;
+    
+}
+.causas h1{
+    font-size: 2.5vh;
+    text-align: center;
+    font-weight: bold;
+}
+.causas ul {
+    list-style-type: disclosure-closed;
+    cursor: pointer;
+    display: grid;
+    justify-content: center;
+   
+}
+.causas p  {
+    color: #1B98E0;
+    font-size: 2.5vh;
+}
+.causas a {
+    text-decoration: none;
+}
+

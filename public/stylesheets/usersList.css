@@ -1,0 +1,47 @@
+
+* {
+    font-family: 'DM Sans', sans-serif;
+  }
+
+.cardUsuario{
+    text-align: center;
+    max-width: 60rem;
+    display: grid;
+    gap: 20px;
+    width: 25%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    box-shadow: 1.5px 1.5px 5px;
+    margin: 2% auto;
+}
+.cardUsuario img {
+    width: 150px;
+    height: fit-content;
+    justify-self: center;
+}
+.imgCard{
+    width: 150px;
+}
+.cardUsuario a {
+    font-size: 2.5vh;
+    
+
+}
+.cardUsuario h1 {
+    font-size: 2.5vh
+}
+button {
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    background-color: #F6F6F6;
+    color: #1B98E0;
+    font-size: 2.5vh;
+}
+
+@media screen and (max-width: 767px){
+    .cardUsuario {
+        width: 95%;
+    }
+}

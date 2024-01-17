@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="../public/stylesheets/editUser.css">
+    <link rel="icon" type="image/x-icon" href="../public/img/SDG-Wheel.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../JavaScript/app.js"></script>
+    <title>Editar Usuário</title>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="containerUser" id="dataUser">
+        <h1>Editar Usuário</h1>
+        <input type="number" id="idUser" placeholder="ID" disabled>
+        <input type="text" id="name" placeholder="Nome">
+        <input type="text" id="email" placeholder="Email">
+        <input type="text" id="cpf" placeholder="CPF">
+        <input type="text" id="password" placeholder="Senha">
+        <select name="office" id="office">
+            <option value="1">Administrador</option>
+            <option value="2" selected>Usuário</option>
+        </select>
+        <input type="text" id="company" placeholder="Empresa" disabled>
+        <button id="btnEditUser">Confirmar alterações</button>
+    </div>
+    
+    <div class="projetos">
+        <div class="projeto-container"></div>
+        <h3>Projetetos deste usuário</h3>
+            <div id="container"></div>
+    </div>
+    </div>
+    <footer id="footer"></footer>
+    <script src="../JavaScript/editUser.js"></script>
+</body>
+
+</html>

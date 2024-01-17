@@ -1,0 +1,64 @@
+.cardProjeto {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1%;
+    width: 50%;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: #F6F6F6;
+    box-shadow: 1.5px 1.5px 5px;
+    margin: 2% auto;
+}
+@media (max-width: 768px) {
+    .cardProjeto {
+        display: block;
+    width: 100%;
+    text-align: center;
+    }
+    }
+
+.imgCard {
+    grid-row: 1 / span 3;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cardProjeto .conteudoCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.conteudoCard {
+    gap: 10px;
+}
+
+.conteudoCard p {
+    font-size: 20px;
+    margin: 0;
+}
+
+.span1 {
+    font-size: large;
+    color: #1B98E0;
+}
+
+.span2 {
+    color: #000000;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 700,
+        'GRAD' 0,
+        'opsz' 48;
+        display:inline;    
+    border: none;
+    background-color: #f6f6f6;
+}
+
+.buttonsCard a {
+    padding: 0 50px;
+}
+

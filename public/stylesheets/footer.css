@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+*
+
+footer
+{   
+    background-color: #F6F6F6;
+    text-align: start;
+    width: auto;
+    
+}
+
+.footer__container {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 85rem;
+}
+
+.footer__container__left{
+    width: auto;
+}
+
+.footer__container__left__logo {
+    width: 60%;
+}
+
+.footer__container__left__icons {
+    display: flex;
+    list-style: none;
+    padding: 0 5%;
+}
+
+.footer__container__left__icons li{
+    margin: 0 2%;
+    padding: 0;
+}
+
+.footer__container__left__icons img{
+    width: 100%;
+}
+
+.footer__container__content h1{
+    font-size: 2.8vh;
+    color: #1B98E0;
+}
+
+.footer__container__content li{
+    list-style: none;
+    font-size: 1.85vh;
+}
+
+@media screen and (max-width: 767px){
+    .footer__container {
+        flex-direction: column; /* Disposição vertical dos elementos */
+    }
+    .footer__container__left__logo {
+        width: 100%; /* Ocupa toda a largura em dispositivos menores */
+    }
+    .footer__container__left__icons {
+        justify-content: center; /* Centraliza os ícones em dispositivos menores */
+    }
+    .footer__container__content {
+        width: 100%; /* Ocupa toda a largura em dispositivos menores */
+        text-align: center;
+    }
+}

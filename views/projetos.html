@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../JavaScript/app.js"></script>
+    <script src="../JavaScript/listarProjetosOds.js"></script>
+    <link rel="stylesheet" href="../public/stylesheets/projetos.css">
+    <link rel="icon" type="image/x-icon" href="../public/img/SDG-Wheel.png">
+    <title>Projetos</title>
+</head>
+<body>
+    <div id="header"></div>
+    <div class="containerProjetos">  
+        <div id="totalProjetos">
+            <input type="checkbox" name="" id="ActivateFilter" class="select1">
+            <label for="ActivateFilter">Marque para filtrar por cidade</label>  
+                
+        </div>      
+        <div id="totalProjetos">
+            <select class="select1" name="estadoProjeto" id="estadoProjeto" disabled >
+                <option value="">RS</option>
+            </select>
+            <select class="select2" name="cidadeProjeto" id="cidadeProjeto"></select>                
+        </div>              
+    </div>
+    <div id="textOds"></div>
+    <div id="divNomeProjeto"></div>
+    <footer id="footer"></footer>         
+</body>
+</html>
