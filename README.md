@@ -4,10 +4,12 @@
 </p>
 
 ## Descrição do Projeto
-...
+	Projeto que fiz junto com colegas no meu curso técnico em desenvolvimento de 
+	sistemas para o SOMAR, que é um projeto que surge com o intuito de compartilhar 
+	conhecimento e reflexões acerca de tudo que nos atravessa.
 
 ## Status do Projeto
-     Em construção...  
+     Finalizado
 ## Tecnologias utilizadas
 * HTML
 * CSS
@@ -20,8 +22,3 @@
 ## Documentação
 
 [Documentação](https://xn--link-da-documentao-itb3f/)
-
-## Autores
-| [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Dostoevskij_1872.jpg/800px-Dostoevskij_1872.jpg" width=115><br><sub>Andy</sub>](https://github.com/anderson-santos-dev) |
-| [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Dostoevskij_1872.jpg/800px-Dostoevskij_1872.jpg" width=115><br><sub>Lucas Pedroso</sub>](https://github.com/1lucaspedroso) |
-| :---: |
