@@ -4,7 +4,7 @@
 </p>
 
 ## Descrição do Projeto
-	Projeto que fiz junto com colegas no meu curso técnico em desenvolvimento de 
+	Tabalho que fiz junto com colegas no meu curso técnico em desenvolvimento de 
 	sistemas para o SOMAR, que é um projeto que surge com o intuito de compartilhar 
 	conhecimento e reflexões acerca de tudo que nos atravessa.
 
